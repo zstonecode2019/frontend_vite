@@ -23,7 +23,7 @@ const router = createRouter({
 })
 
 // 路由守卫
-router.beforeEach((to, from) => {
+router.beforeEach((to) => {
     try {
         if (!to.matched.length) {
             router.push('/404?page=' + to.fullPath)

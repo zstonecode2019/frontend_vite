@@ -5,7 +5,6 @@ class API {
     instance: API | null = null;
     headers: Headers | null = null;
     timeout: number = 10000;
-    router: any | null = null;
 
     constructor(baseURL: string) {
         if (this.instance) {
@@ -118,6 +117,7 @@ class API {
     }
 
     _handlesError(error: Response | Error) {
+        console.log(error);
         ElMessage({
             type: 'error',
             message: '接口请求错误!'
