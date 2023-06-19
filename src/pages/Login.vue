@@ -3,10 +3,10 @@
     <div class="login-title">登录界面</div>
     <el-form ref="ruleFormRef" :model="ruleForm" status-icon :rules="rules" label-width="120px" class="demo-ruleForm">
       <el-form-item label="用户名:" prop="username">
-        <el-input v-model="ruleForm.username" type="text" autocomplete="off" />
+        <el-input v-model="ruleForm.username" type="text" placeholder="请输入账号" autocomplete="off" />
       </el-form-item>
       <el-form-item label="密码:" prop="password">
-        <el-input v-model="ruleForm.password" type="password" autocomplete="off" />
+        <el-input v-model="ruleForm.password" type="password" placeholder="请输入密码" autocomplete="off" />
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="submitForm(ruleFormRef)">登录</el-button>
@@ -22,6 +22,7 @@ import type { FormInstance, FormRules } from 'element-plus'
 import { useRouter } from 'vue-router'
 import api from '@/api'
 import { useUserStore } from '@/stores/user'
+import { ElMessage } from 'element-plus';
 
 const ruleFormRef = ref<FormInstance>()
 const router = useRouter()
@@ -65,11 +66,10 @@ const submitForm = (formEl: FormInstance | undefined) => {
         // 登录成功
         router.push({ path: '/' });
       } else {
-        console.log(rs.data);
+        ElMessage.error(rs.data);
       }
-      console.log('submit!')
     } else {
-      console.log('error submit!')
+      ElMessage.error('账号或密码验证错误!');
       return false
     }
   })

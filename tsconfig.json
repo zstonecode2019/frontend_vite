@@ -23,7 +23,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "types": [
-      "element-plus/global"
+      "element-plus/global",
+      "node"
     ],
     "baseUrl": ".",
     "paths": {
