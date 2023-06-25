@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noImplicitAny": false,
+      "module": "es6",
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": true,
+      "strictPropertyInitialization": false,
+      "moduleResolution": "node",
+      "lib": [
+        "ES2015",
+        "dom"
+      ],
+      "typeRoots": [
+        "./typings"
+      ],
+      // "types": [
+      //   "gl-matrix",
+      //   "socket.io-client"
+      // ]
+    },
+  }

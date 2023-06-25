@@ -12,6 +12,7 @@
     /* Bundler mode */
     // "moduleResolution": "bundler",
     "moduleResolution": "node",
+    "strictPropertyInitialization": false,
     // "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,

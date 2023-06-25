@@ -5,23 +5,38 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "build:benben_avg": "cd src/lib/benben_avg && npm run build",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mediapipe/drawing_utils": "^0.3.1675466124",
+    "@mediapipe/hands": "^0.4.1675469240",
+    "@mediapipe/tasks-vision": "^0.10.2-rc2",
+    "@orillusion/core": "^0.6.5",
     "element-plus": "^2.3.6",
     "pinia": "^2.1.4",
+    "tone": "^14.7.77",
     "vue": "^3.2.47",
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
     "@vitejs/plugin-vue": "^4.1.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.15.1",
+    "prettier": "^2.8.8",
     "sass": "^1.63.4",
     "typescript": "^5.0.2",
     "unplugin-auto-import": "^0.16.4",
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.3.9",
+    "vite-plugin-resolve-externals": "^0.2.2",
+    "vite-plugin-static-copy": "^0.16.0",
     "vue-tsc": "^1.4.2"
   }
 }
